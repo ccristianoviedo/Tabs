@@ -1,9 +1,9 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 import {CATEGORIES} from '../data/categories';
-import {GridItem} from '../components/gridItem'
+import GridItem from '../components/gridItem'
 
-export default function CategoryScreen({navigation}) {
+export default function CategoryScreen({ navigation }) {
 
     const handleSelectedCategory = (item) =>{
         navigation.navigate('Products', {

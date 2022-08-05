@@ -10,8 +10,8 @@ const BreadItem=({item, onSelected})=>{
                 <Text style={styles.title}>{item.name}</Text>
             </View>
             <View>
-                <Text style={styles.detail}>{item.price}</Text>
-                <Text style={styles.detail}>{item.weight}</Text>
+                <Text style={styles.detail}>Precio: {item.price}</Text>
+                <Text style={styles.detail}>Peso: {item.weight}</Text>
             </View>
         </TouchableOpacity>
     )
@@ -22,13 +22,16 @@ const styles = StyleSheet.create({
         fontSize: 28,
     },
     breadItem:{
+        flex:1,
         margin:10,
         padding:20,
-        backgroundColor:'green',
+        backgroundColor:'#67D45A',
         borderRadius:3,
     },
     detail:{
-        fontSize: 18,
+        fontSize: 38,
+        backgroundColor:'#A5DABE',
+        border: 'black solid'
     }
 })
 export default BreadItem;

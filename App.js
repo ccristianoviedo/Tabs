@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native';
 import {useFonts} from "expo-font";
 import AppLoading from 'expo-app-loading';
-import ShopNavigator from './navigation/ShopNavigator';
+import MainNavigator from "./navigation/Index";
+
 
 export default function App() {
 
@@ -13,15 +13,6 @@ export default function App() {
 if (!loaded) return <AppLoading/>
 
 return (
-    <ShopNavigator/>
-  );
+   <MainNavigator/>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

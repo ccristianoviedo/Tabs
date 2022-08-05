@@ -1,15 +1,14 @@
-import { StyleSheet, Text, View,Button, FlatList } from 'react-native';
-import {BREAD} from '../data/breads'
+import {FlatList } from 'react-native';
+import {BREADS} from '../data/breads'
 import BreadItem from '../components/breadItem'
 
 export default function CategoryBreadScreen({navigation, route}) {
 
-    const breads = BREAD.filter(bread => bread.category === route.params.categoryID)
+    const breads = BREADS.filter(bread => bread.category === route.params.categoryID)
 
     const handlerSelected = (item) =>{
-        navigation.navigate('Detail',{
-            productID:item.id,
-            name:item.name
+        navigation.navigate('Details',{
+            bread: item
         })
     }
 
@@ -17,9 +16,9 @@ export default function CategoryBreadScreen({navigation, route}) {
 
   return (
     <FlatList
-    data={breads}
-    keyExtractor={(item)=>item.id}
-    renderItem={renderItemBread}  
+      data={breads}
+      keyExtractor={(item)=>item.id}
+      renderItem={renderItemBread}  
     />
   );
 }

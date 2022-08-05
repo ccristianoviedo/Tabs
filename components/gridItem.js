@@ -9,11 +9,11 @@ const GridItem= ({item, onSelected})=>{
                 onPress={()=>onSelected(item)}
                 >       
                 <View>
-                    <Text style={styles.title}>{item.name}</Text>
+                    <Text style={styles.title}>{item.title}</Text>
                 </View>
             </TouchableOpacity> 
         </View>
-    );
+    )
 }
 const styles = StyleSheet.create({
     gridItem:{
@@ -34,5 +34,10 @@ const styles = StyleSheet.create({
         alignItems:'flex-end',
         padding:8,
     },
+    title:{
+        color:'black',
+        fontSize:20,
+        fontFamily:'UbuntuBold',
+    }
 })
 export default GridItem;
