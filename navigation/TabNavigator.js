@@ -4,6 +4,8 @@ import { StyleSheet, View, Text } from "react-native";
 import ShopNavigator from "../navigation/ShopNavigator";
 import CartNavigator from "../navigation/CartNavigator";
 import Ionicons from '@expo/vector-icons/Ionicons'
+import OrderNavigator from "./OrderNavigator";
+
 
 const BottomsTabs = createBottomTabNavigator()
 
@@ -40,6 +42,20 @@ const TabNavigator = () =>{
                             <Ionicons name='md-home' size='24' color='black' />
                             <Text>
                                 CARRITO
+                            </Text>
+                        </View>
+                    )
+                }}
+            />
+            <BottomsTabs.Screen 
+                name='OrderTab'
+                component={OrderNavigator}
+                options={{
+                    tabBarIcon: ({focused})=>(
+                        <View style={styles.item}>
+                            <Ionicons name='md-hammer' size='24' color='black' />
+                            <Text>
+                                Order
                             </Text>
                         </View>
                     )

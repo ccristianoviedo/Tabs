@@ -2,7 +2,6 @@ import {useFonts} from "expo-font";
 import AppLoading from 'expo-app-loading';
 import MainNavigator from "./navigation/Index";
 
-
 export default function App() {
 
   const [loaded] = useFonts({
